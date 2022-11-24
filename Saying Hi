@@ -1,0 +1,7 @@
+import re
+
+regex = re.compile(r"^[Hh][Ii]\s[^Dd].*$")
+
+for _ in range(int(input())):
+    if match:= regex.match(input()):
+        print(match.group(0))
