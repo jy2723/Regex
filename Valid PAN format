@@ -1,0 +1,11 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+class Solution {
+    static void Main(String[] args) {
+        if (!int.TryParse(Console.ReadLine(), out var n)) throw new ArgumentException("Incorrect records count");
+        var regex = new System.Text.RegularExpressions.Regex("^[A-Z]{5}[0-9]{4}[A-Z]$");
+        for (var i = 0; i < n; i++)
+            Console.WriteLine(regex.IsMatch(Console.ReadLine()) ? "YES" : "NO");
+    }
+}
