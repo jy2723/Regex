@@ -1,0 +1,9 @@
+import re
+l=[]
+for _ in range(int(input())):
+    pattern = r'<(\w+)'
+    match = re.findall(pattern,input())
+    for i in match:
+        l.append(i)        
+a = sorted(set(l))
+print(';'.join(a))
