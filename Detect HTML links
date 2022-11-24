@@ -1,0 +1,8 @@
+import re
+N = int(input())
+pattern = r'<a\shref=\"(.+?)\".*?>([^<]*?)</'
+for _ in range(N):
+       st = input()
+       match = re.findall(pattern,st)
+       for l,t in match:
+        print(f'{l},{t.strip()}')
